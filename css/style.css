@@ -1,0 +1,643 @@
+*{
+    box-sizing: border-box;
+}
+
+
+/* MAIN SELECTOR */
+
+body{
+    background:rgb(247, 247, 247);
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin:0px;
+}
+
+header{
+    display: inline-block;
+    width:100%;
+    height: 88px;   
+}
+
+main{
+    margin-top:-20px;
+}
+
+
+footer{
+    margin-top:0px;
+    display: block;
+    width:100%;
+    background:black;
+    color:white;
+    height: 200px;
+    text-align: center;
+    padding:100px;
+
+}
+
+
+
+
+
+/* FONT AND HEADINGS AND COLORS */
+
+/* font für h1 / h2 */
+@font-face {
+    font-family: 'din condensed';
+    src: url("./fonts/DIN Condensed Bold.ttf");
+}
+
+ :root {
+    --farbe1: #9E9461; 
+    --farbe2:#a9c0c2;
+  }
+
+.farbe2Background{
+      background-color: #a9c0c2 ;
+  }
+
+.farbe1Background{
+    background-color: #9E9461 ;
+}
+
+.banner h1,main h2{
+   
+    font-family: 'din condensed','Fjalla One', sans-serif;
+
+    background-color: black;
+    color:white;
+    font-size: 45px;
+    text-transform: uppercase;
+    line-height: 57px;
+    
+    display: inline;
+    text-align:left;
+    
+    border-top: solid 10px black;
+    font-size: 50px;
+    line-height: 63px;
+   
+}
+
+h1::before, h2::before{
+    content: " " ;
+    white-space: pre;
+  }
+
+h1::after, h2::after {
+    content: " " ;
+    white-space: pre;
+}
+
+.banner h2{
+    color:black;
+    font-size: 30px;
+    font-family: 'Fjalla One', sans-serif;
+    margin: 15px 0px;
+    line-height: 1em;
+}
+
+main h3{
+    font-family: 'Fjalla One', sans-serif;
+    color:black;
+    font-size: 30px;
+    
+    padding-top:50px;
+   
+    line-height: 1.4em;
+    margin:0px;
+    text-align:center;
+}
+
+main h4{
+    background-color: #a9c0c2;
+    display: inline-block;
+    color: #000;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+
+    font-size: 14px;
+    border-color: #a9c0c2;
+    border-width: 9px;
+    border-style: solid;
+    /* line-height: 3.5; */
+    margin: 0px 0px;
+   
+    white-space: nowrap;
+
+}
+
+main p{
+    text-align:center;
+  
+    margin: 0 auto;
+    padding-top:20px;
+
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    letter-spacing: .01em;
+    line-height: 1.6em;
+    text-transform: none;
+}
+
+
+hr{
+    padding: 2px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 60px;
+    background-color: black;
+    margin-left: 0px;
+}
+
+
+/* END OF FONT AND HEADINGS */
+
+
+
+
+
+/* NAVIGATION */
+
+.logo{
+    
+    font-size: 1.3em;
+}
+
+nav{
+    display: inline-block;
+
+    width:100%;
+    height:88px;
+
+    background-color:white;
+    position: fixed;
+   
+    padding:15px 30px;
+    z-index: 1;
+   
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.055);  
+}
+
+nav li{
+    display: inline-block;
+    color: black;
+    text-align:center;
+    padding: 18px;
+}
+
+li:hover,nav #activePage{
+   
+    text-decoration:underline;
+    color: black;
+   
+  
+}
+
+li a:link{
+   
+    color: black;
+    text-decoration:none;
+
+}
+
+li a:visited{
+   
+    color: black;
+    
+}
+
+nav ul{
+    text-align:right;
+    
+    margin:0px;
+    padding:0px;
+    letter-spacing: .15em;
+    float: right;
+}
+
+.cta{
+    color:white;
+    background-color: #9E9461;
+    padding:13px 26px;
+}
+
+/* NAVIGATION ENDS HERE  */
+
+
+
+
+/* BANNER */ /* BANNER */ /* BANNER */
+
+
+.banner{
+
+    height:600px;
+    margin-top: -20px;
+}
+
+.bannerBackground{
+    background-image: url('../pics/Projektmanager Berlin Entrepreneur Werbefotograf - Phil Meinwelt.jpg');
+    background-repeat: no-repeat;
+
+    background-size: 120%;
+    background-position-y: -140px;
+
+}
+
+
+.heading{
+    position: absolute;
+    top:calc(100vh - 70%);
+    left:8%;
+    width: 50%;
+}
+
+
+
+/* BANNER END HERE */
+
+
+
+
+/* Table */
+
+.tablestyle{
+    border-spacing: 30px;
+
+}
+
+
+
+/* SECTIONS */
+
+.newSection
+{
+    padding: 50px 50px 50px 50px;
+    width:70%;
+    margin: 0 auto;
+}
+
+.sectionFullWidth{
+    width:100% !important;
+    margin: 0 auto;
+}
+
+.sectionCTA{
+    width:100% !important;
+    margin: 0 auto;
+    padding: 100px 50px 50px 10px;
+}
+
+.sectionCTA h3{
+text-align: left;
+}
+
+.sectionCTA div{
+    text-align: left;
+   margin-left:30%;
+      
+    }
+
+
+    /* GRID */
+
+.container{
+    /* grid parent  */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+    "box1 box2 box3";
+ 
+    column-gap: 10px;
+    row-gap: 30px;
+
+
+}
+
+.item-1 {
+    grid-area: box1;
+    justify-self: center;
+    color: black;
+    background-color:white;
+    padding:30px; 
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.082);
+    height:100%;
+
+    place-self: center stretch;
+  }
+
+
+.item-2{
+    grid-area: box2;
+    justify-self: center;
+    color: black;
+    background-color:white;
+    padding:30px; 
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.082);
+    height:100%;
+    place-self: center stretch;
+  }
+
+.item-3 {
+    grid-area: box3;
+    justify-self: center;
+    color: black;
+    background-color:white;
+    padding:30px; 
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.082);
+    height:100%;
+    place-self: center stretch;
+  }
+
+
+
+
+/* instead of Grid u can us that too */
+
+/* .box{
+    display: inline-block;
+    width:30%;
+    margin:10px; 
+
+    color: black;
+    background-color:white;
+    padding:30px; 
+
+    height:100%;
+    
+}
+
+.boxLeft{
+    
+    float: left;
+   
+    
+}
+
+.boxCenter{
+    margin:10px;
+   
+   
+}
+
+.boxRight{
+   
+    float: right;
+   
+   
+}
+
+.clear{
+    clear: both;
+} */
+
+
+
+/* ARTICLE */
+
+article h2{
+    padding-top:20px;
+    text-align:left;
+}
+
+article h3{
+    padding-top:30px;
+    text-align:left;
+}
+
+article h4{
+    background-color: var(--farbe1);
+    border-color: var(--farbe1);
+    font-weight: bold;
+    color:white;
+    font-size: 20px;
+   
+}
+
+article img{
+width: 100%;
+   
+}
+
+article p{
+    text-align: left;
+ 
+    margin-left: 0px;
+    padding-top:10px;
+    padding-bottom:30px;
+}
+
+.short{
+    display: inline-block; 
+    padding: 30px;
+    background-color: white;
+    margin-top: 40px;
+    width: 100%;
+
+}
+
+article a.buttonOutline{
+    margin: 0px 0px;
+}
+
+
+/* BUTTONS */
+
+
+.buttonOutline{
+    display: inline-block;
+    padding: 13px 26px;
+    margin-top: 30px;
+   
+    font-size: 12px;
+ 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: Open Sans;
+    font-size: 18px;
+
+    font-style: normal;
+    text-transform: none;
+    text-decoration: none;
+    font-weight:400;
+    letter-spacing: .1em;
+    color:  #9e9461;
+    background-color: white;
+   
+    border: solid 3px #9e9461;
+
+}
+
+
+.buttonFull{
+  
+    display: inline-block;
+    padding: 13px 26px;
+    margin-top: 30px;
+   
+    font-size: 12px;
+ 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Open Sans';
+    font-size: 18px;
+
+    font-style: normal;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: .1em;
+    color: black;
+    background-color:var(--farbe2);
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+   
+}
+
+.buttonFull:hover{
+  
+    background-color: var(--farbe1);
+    border-color: var(--farbe1);
+
+   
+}
+
+
+
+
+
+/* SECTION ENDS */
+
+
+
+
+
+/* Form */
+
+
+
+
+form div{
+    margin:20px 0px;
+
+  
+}
+
+form .form-checkbox{
+    text-align:left;
+    background-color:red;
+    
+    
+}
+
+.left{
+    float:left;
+    display:block;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="comment"],
+form select,form textarea {
+
+    border-bottom: solid 3px;
+    font-size: 15px;
+    font-weight: 400;
+     background:white;  
+   border: 3px solid var(--farbe2);
+   
+   width:100%;
+   
+     padding: 12px;
+   }
+
+form button{
+    margin:0;
+}
+
+form button{
+    border: 0px;
+}
+   
+label{
+      font-family: 'Helvetica Neue', sans-serif; line-height: 1;
+   color: black;
+     font-size: 15px;
+     font-weight: 700;
+
+   }
+   
+   
+
+
+
+  
+
+
+/* STUFF  */
+
+
+.divCenter{
+    width:90%;
+    margin: 0 auto;
+    text-align:center;
+}
+
+
+/* BSP FOR NAV PIC AND TEXT TOGETHER */
+.divContainerTable{
+    display:table;
+    float: left;
+}
+
+.divContainerCell{
+    display:table-cell;
+    vertical-align: middle;
+    padding:10px;
+}
+
+
+/* SKILLSET */
+.skills{
+    background: #a9c0c2;
+    display: inline;
+    color: #000;
+    font-size: 16px;
+    border-color: #a9c0c2;
+    border-width: 9px;
+    border-style: solid;
+    line-height: 3.5;
+    margin: 0px 5px;
+    white-space: nowrap;
+
+}
+
+.skillSet{
+    display: inline-block;
+    text-align:left;
+ 
+    font-weight: bold;
+    margin-bottom:40px;
+}
+
+.centerIframe{
+    width:100%;
+    margin: 100px auto;
+}
+
+
+/* CHANGE BLOCK */
+.setInlineBlock{
+    display: inline-block;
+}
+.setInline{
+    display: inline;
+}
+
+.setBlock{
+    display: block;
+}
+
+
